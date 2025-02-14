@@ -27,12 +27,12 @@ travel-guide-app/
 │   │   ├── components/     # Reusable UI components
 │   │   ├── pages/          # App pages (e.g., Home, Itinerary, Tips)
 │   │   ├── props/          # API Models, interfaces, etc.
-│   │   └── App.tsx        # Entry point
+│   │   └── App.tsx         # Entry point
 ├── backend/                # Backend code (Node.js)
 │   ├── application/        # Request handlers
-│   ├── core/             # Database models
-│   │   └── prompts/                # Predefined LLM prompts
-│   ├── infrastructure/             # Client and API configurations
+│   ├── core/               # Database models
+│   │   └── prompts/        # Predefined LLM prompts
+│   ├── infrastructure/     # Client and API configurations
 │   └── app.ts              # Main server file
 ├── .env                    # Environment variables
 ├── README.md               # This file
