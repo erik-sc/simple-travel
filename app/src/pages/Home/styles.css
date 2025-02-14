@@ -1,0 +1,43 @@
+.home-main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 35%;
+  min-height: 100vh;
+  color: #fff;
+  padding: 20px;
+}
+
+.home-main {
+  background: rgb(255, 244, 239);
+}
+
+
+.animated-title {
+  animation: fadeInOut 3s ease-in-out infinite;
+  text-align: center;
+  font-size: 72px;
+  background: -webkit-linear-gradient(135deg, #ff9a9e 0%, #ffb39e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
