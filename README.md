@@ -20,6 +20,7 @@ Welcome to the Travel Guide LLM-Powered App! This app leverages the power of Lar
 - APIs: Google Maps API (for location data)
 
 ### Project Structure
+```
 travel-guide-app/
 ├── app/                    # Frontend code
 │   ├── public/             # Assets
@@ -37,6 +38,7 @@ travel-guide-app/
 ├── .env                    # Environment variables
 ├── README.md               # This file
 └── package.json            # Dependencies
+```
 
 ### License
 This project is licensed under the MIT License. See the LICENSE file for details.
