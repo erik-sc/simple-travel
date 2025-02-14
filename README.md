@@ -32,7 +32,8 @@ travel-guide-app/
 ├── backend/                # Backend code (Node.js)
 │   ├── application/        # Request handlers
 │   ├── core/               # Database models
-│   │   └── prompts/        # Predefined LLM prompts
+│   │   ├── constants/      # Predefined LLM prompts and service constants 
+│   │   └── models/         # Interfaces and props
 │   ├── infrastructure/     # Client and API configurations
 │   └── app.ts              # Main server file
 ├── .env                    # Environment variables
