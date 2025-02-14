@@ -1,5 +1,5 @@
-## Travel Guide LLM-Powered App
-Welcome to the Travel Guide LLM-Powered App! This app leverages the power of Large Language Models (LLMs) to provide personalized travel recommendations, itineraries, and local tips for travelers worldwide. Whether you're planning a weekend getaway or a month-long adventure, this app is your go-to companion for seamless travel planning.
+## Simple Travel
+Welcome to Simple Travel! This app leverages the power of Large Language Models (LLMs) to provide personalized travel recommendations, itineraries, and local tips for travelers worldwide. Whether you're planning a weekend getaway or a month-long adventure, this app is your go-to companion for seamless travel planning.
 
 ### Features
 - Itinerary Planning: Generate detailed day-by-day itineraries for your trips, including activities, timings, and transportation tips.
