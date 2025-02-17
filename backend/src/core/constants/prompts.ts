@@ -1,3 +1,5 @@
+import { ChatCompletionMessageParam } from "openai/resources";
+
 export const INITIAL_PROMPT = `
     You are a travel guide planner. Based on my preferences and locations, you will provide me with an intuitive travel itinerary.
     You must organize the itinerary based on the time I will spend in each location.
@@ -53,8 +55,21 @@ export const USER_PROMPT = `
     Here is my budget: {BUDGET}
     Here is my travel style: {TRAVEL_STYLE}
 
-    Please generate a detailed travel itinerary in the JSON structure described earlier.
+    Please generate a detailed travel itinerary in the JSON structure described earlier. Include only the JSON so it can be parsed.
 `;
+
+export const CORRECTION_PROMPT = `
+    'The response format was incorrect. 
+    Please provide the itinerary in the correct JSON format: 
+    { "location": string, "description": string, "days": [{ "day": number, "activities": string[], "meals": string[], "transportations": string }] }'
+`;
+
+export const INITIAL_MESSAGE_PARAM: ChatCompletionMessageParam = { role: 'system', content: INITIAL_PROMPT };
+export const CORRECTION_MESSAGE_PARAM: ChatCompletionMessageParam = {
+    role: 'user',
+    content: CORRECTION_PROMPT,
+};
+
 export const LOCATION_TOKEN = /\{LOCATIONS\}/g;
 export const BUDGET_TOKEN = /\{BUDGET\}/g;
 export const TRAVEL_STYLE_TOKEN = /\{TRAVEL_STYLE\}/g;

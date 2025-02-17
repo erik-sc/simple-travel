@@ -1,9 +1,8 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import { Clients } from './types'
-import { createResources } from './infrastructure/startup/createResources'
 import { createRoutes } from './infrastructure/startup/createRoutes'
 import cors from 'cors'
+import { startup } from './infrastructure/startup/startup'
 
 dotenv.config()
 
@@ -17,10 +16,10 @@ const run = async () => {
     credentials: true,
   }))
 
-  const clients: Clients = await createResources()
+  const services = startup();
 
   app.use(express.json())
-  app.use(createRoutes(clients))
+  app.use(createRoutes(services))
 
   const PORT = process.env.PORT || 3000
   app.listen(PORT, () => {

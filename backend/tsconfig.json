@@ -1,22 +1,21 @@
 {
 	"compilerOptions": {
-		"target": "esnext",
-		"module": "commonjs",
-		"lib": [
-			"es2021",
-			"dom"
-		],
-		"declaration": true,
-		"skipLibCheck": true,
-		"sourceMap": true,
-		"outDir": "./dist",
-		"rootDir": ".",
-		"strict": true,
-		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true,
-		"resolveJsonModule": true,
-		"esModuleInterop": true,
-		"moduleResolution": "node"
+		 /* Base Options: */
+		 "esModuleInterop": true,
+		 "skipLibCheck": true,
+		 "target": "es2022",
+		 "allowJs": true,
+		 "resolveJsonModule": true,
+		 "moduleDetection": "force",
+		 "isolatedModules": true,
+		 "module": "commonjs",
+		 "outDir": "dist",
+		 "sourceMap": true,
+		 /* Strictness */
+		 "strict": true,
+		 "noUncheckedIndexedAccess": true,
+		 "noImplicitOverride": true,
+
 	},
 	"include": [
 		"src/**/*.ts"

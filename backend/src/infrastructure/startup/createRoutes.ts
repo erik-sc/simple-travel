@@ -1,13 +1,13 @@
 import { Router, Request, Response } from 'express'
 import { ConversationService } from '../../application/services/ConversationService';
+import { Services } from './startup';
 
-export const createRoutes = (clients: any) => {
+export const createRoutes = (services: Services) => {
   const router = Router();
-  const service = new ConversationService(clients);
-
+  const {conversationService} = services;
   router.post('/process', async (req: Request, res: Response) => {
     try {
-      const conv = await service.converse();
+      const conv = await conversationService.processItinerary(req.body);
       res.status(200).send(conv);
     } catch (error) {
       console.error('Error in /converse/text:', error)
