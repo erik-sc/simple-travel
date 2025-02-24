@@ -5,13 +5,13 @@ import { ConversationTextRequest } from '../../core/models/props/ConversationTex
 import { ConversationValidator } from '../validators/ConversationValidator';
 import { DayGuideModel } from '../../core/models/props/DayGuide.model';
 import { sanitizeLLMJsonResponse } from '../../core/utils/string.utils';
-import { IAIClientService } from '../../core/models/services/IClientService';
+import { IExternalApiService } from '../../core/models/services/IClientService';
 
 export class ConversationService {
-  private aiService: IAIClientService;
+  private aiService: IExternalApiService;
   private readonly MAX_RETRIES = 0;
 
-  constructor(clients: IAIClientService) {
+  constructor(clients: IExternalApiService) {
     this.aiService = clients;
   }
 
@@ -39,7 +39,7 @@ export class ConversationService {
 
     while (retryCount <= this.MAX_RETRIES) {
       try {
-        const response = await this.aiService.completion(conversationMessages);
+        const response = await this.aiService.aiCompletion(conversationMessages);
         const generatedText = response?.choices[0]?.message?.content || '';
 
         const itinerary = JSON.parse(sanitizeLLMJsonResponse(generatedText))?.itinerary as Itinerary[];
